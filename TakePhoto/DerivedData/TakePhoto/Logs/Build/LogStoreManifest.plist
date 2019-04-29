@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>9</integer>
+	<key>logs</key>
+	<dict>
+		<key>88098D0B-B089-4290-A4C3-E3540B2DFF31</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>88098D0B-B089-4290-A4C3-E3540B2DFF31.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>TakePhoto project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>TakePhoto</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build TakePhoto</string>
+			<key>timeStartedRecording</key>
+			<real>577321158.02542305</real>
+			<key>timeStoppedRecording</key>
+			<real>577321160.19752002</real>
+			<key>title</key>
+			<string>Build TakePhoto</string>
+			<key>uniqueIdentifier</key>
+			<string>88098D0B-B089-4290-A4C3-E3540B2DFF31</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

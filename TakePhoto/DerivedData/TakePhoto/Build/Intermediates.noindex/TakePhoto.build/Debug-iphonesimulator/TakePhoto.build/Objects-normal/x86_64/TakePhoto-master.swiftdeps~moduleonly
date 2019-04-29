@@ -1,0 +1,6 @@
+version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
+options: "40c8926396592475b48de98a2e8a7911"
+build_time: [1555625030, 765199000]
+inputs:
+  "/Users/dakotakimble/Downloads/TakePhoto/TakePhoto/ViewController.swift": [1555464410, 0]
+  "/Users/dakotakimble/Downloads/TakePhoto/TakePhoto/AppDelegate.swift": [1555460266, 0]
