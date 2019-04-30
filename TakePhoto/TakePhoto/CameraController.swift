@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 class CameraController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate{
+    @IBOutlet weak var imageView: UIImageView!
     
     var imagePicker: UIImagePickerController!
     let database = imageDatabaseController.s
@@ -17,6 +18,10 @@ class CameraController: UIViewController, UINavigationControllerDelegate, UIImag
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         imagePicker.dismiss(animated: true, completion: nil)
         let image = info[.originalImage] as? UIImage
+        imageView.image = image
+        
+        // TODO: Might need to put some of Issiac's code here if it needs access to an ImageView 
+        
         database.savePhotoController(image: image!)
     }
     

@@ -27,6 +27,8 @@ class imageDatabaseController{
     let images = Table("images")
     var imageLabels = ["image1"]
     
+    var difficulty = "easy"
+    
     // The names here are the names of the image files in Assets.xcassets
     var collectionImages: [UIImage] = [
         UIImage(named: "image1")!,
@@ -39,6 +41,8 @@ class imageDatabaseController{
          UIImage(named: "image8")!,
          UIImage(named: "image9")!,*/
     ]
+    
+    var selectedImages = [Number]()
     
     private init(){
         print("take photo")
@@ -61,8 +65,21 @@ class imageDatabaseController{
                 
             }
             
+            getAllImages()
+          
             
-           for image in try db!.prepare(images) {
+        } catch {
+            print(error)
+        }
+    }
+    
+    public func setDifficulty(newDifficulty: String) {
+        difficulty = newDifficulty 
+    }
+    
+    public func getAllImages() {
+        do {
+            for image in try db!.prepare(images) {
                 print("id: \(image[id]), date: \(image[date]), filePathEasy: \(image[filePathEasy]), filePathMedium: \(image[filePathMedium]), filePathHard: \(image[filePathHard]), emotion: \(image[emotion])")
                 
                 let imageData = try Data(contentsOf: URL(fileURLWithPath: image[filePathHard]))
@@ -70,15 +87,45 @@ class imageDatabaseController{
                 collectionImages.append(canvasImage!)
                 imageLabels.append(image[date])
             }
-            
         } catch {
             print(error)
         }
     }
     
+    public func getRandomImage() -> UIImage {
+        let randomIndex = Int.random(in: 0 ..< collectionImages.count);
+        
+        if (difficulty == "hard") {
+            return collectionImages[randomIndex]
+        } else {
+            do {
+                let randomImage = images.filter(date == imageLabels[randomIndex])
+                var imageData = Data()
+                
+                for image in try db!.prepare(randomImage){
+                    if (difficulty == "easy") {
+                        imageData = try Data(contentsOf: URL(fileURLWithPath: image[filePathEasy]))
+                    } else if (difficulty == "medium") {
+                        imageData = try Data(contentsOf: URL(fileURLWithPath: image[filePathMedium]))
+                    } else {
+                        return UIImage()
+                    }
+                    
+                    let canvasImage = UIImage(data: imageData)
+                    return canvasImage!
+                }
+            } catch {
+                print(error)
+            }
+        }
+         return UIImage()
+    }
+    
     public func clearDatabase() {
         do {
             try db!.run(images.delete())
+            collectionImages = [UIImage]()
+            imageLabels = [String]() 
         } catch {
            print(error)
         }
@@ -156,6 +203,7 @@ class imageDatabaseController{
                 // TODO
                 // add shader here
                 // Call Brendan's code here
+               
                 // Use the UIImage returned from Brendan's code instead of "image" blow
                 if let jpgImageDataMedium = image.jpegData(compressionQuality: 0.5){
                     try jpgImageDataMedium.write(to: URLStringMedium)

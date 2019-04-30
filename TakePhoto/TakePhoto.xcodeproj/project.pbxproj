@@ -11,6 +11,8 @@
 		310DF2EF2272169C008B7FCD /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310DF2EE2272169C008B7FCD /* SettingsViewController.swift */; };
 		310DF2F722721B7A008B7FCD /* imageDatabaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310DF2F622721B79008B7FCD /* imageDatabaseController.swift */; };
 		310DF2F922722614008B7FCD /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310DF2F822722614008B7FCD /* CameraController.swift */; };
+		313E01B82278F9D90010C80A /* DifficultySelectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313E01B72278F9D90010C80A /* DifficultySelectController.swift */; };
+		313E01C02278FB770010C80A /* flashcardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313E01BF2278FB770010C80A /* flashcardController.swift */; };
 		31FCDCD6226FC9CB00A1E292 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FCDCBA226FC7D700A1E292 /* SQLite.framework */; };
 		31FCDCD7226FC9D000A1E292 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FCDCBA226FC7D700A1E292 /* SQLite.framework */; };
 		31FCDCD8226FC9D000A1E292 /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 31FCDCBA226FC7D700A1E292 /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -117,6 +119,8 @@
 		310DF2EE2272169C008B7FCD /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		310DF2F622721B79008B7FCD /* imageDatabaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageDatabaseController.swift; sourceTree = "<group>"; };
 		310DF2F822722614008B7FCD /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
+		313E01B72278F9D90010C80A /* DifficultySelectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultySelectController.swift; sourceTree = "<group>"; };
+		313E01BF2278FB770010C80A /* flashcardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flashcardController.swift; sourceTree = "<group>"; };
 		31FCDCAF226FC7D700A1E292 /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "../../../Downloads/SQLite-2.swift-master/SQLite.xcodeproj"; sourceTree = "<group>"; };
 		4F1DC8552266A82B0071A564 /* TakePhoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TakePhoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F1DC8582266A82B0071A564 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -206,6 +210,8 @@
 				4F1DC8582266A82B0071A564 /* AppDelegate.swift */,
 				310DF2F822722614008B7FCD /* CameraController.swift */,
 				4F1DC85A2266A82B0071A564 /* ViewController.swift */,
+				313E01B72278F9D90010C80A /* DifficultySelectController.swift */,
+				313E01BF2278FB770010C80A /* flashcardController.swift */,
 				4F1DC85C2266A82B0071A564 /* Main.storyboard */,
 				4F1DC85F2266A8340071A564 /* Assets.xcassets */,
 				DDCE20AE226936DC00A72974 /* settings.png */,
@@ -382,6 +388,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				313E01C02278FB770010C80A /* flashcardController.swift in Sources */,
+				313E01B82278F9D90010C80A /* DifficultySelectController.swift in Sources */,
 				310DF2F922722614008B7FCD /* CameraController.swift in Sources */,
 				4F1DC85B2266A82B0071A564 /* ViewController.swift in Sources */,
 				4F1DC8592266A82B0071A564 /* AppDelegate.swift in Sources */,
@@ -544,13 +552,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 796CAT93SM;
+				DEVELOPMENT_TEAM = SDTW6N92A8;
 				INFOPLIST_FILE = TakePhoto/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gimm.autismApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.olivia.gimm310;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -565,13 +573,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 796CAT93SM;
+				DEVELOPMENT_TEAM = SDTW6N92A8;
 				INFOPLIST_FILE = TakePhoto/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gimm.autismApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.olivia.gimm310;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
