@@ -203,6 +203,64 @@ class imageDatabaseController{
                 // TODO
                 // add shader here
                 // Call Brendan's code here
+                //Setup a simple way to choose effect values
+                struct Filter {
+                    let filterName:String
+                    var filterEffectValue:Any?
+                    var filterEffectValueName:String?
+                    
+                    init(filterName: String, filterEffectValue: Any?, filterEffectValueName:String?) {
+                        self.filterName = filterName
+                        self.filterEffectValue = filterEffectValue
+                        self.filterEffectValueName = filterEffectValueName
+                    }
+                }
+                
+                //Reference the image View probably done already so i commented it out
+                    //@IBOutlet weak var imgView: UIImageView!
+                
+                //Function that atually applies the filters. should be called when we want ta filter applied
+                func applyFilterTo(image: UIImage, filterEffect: Filter)-> UIImage?{
+                    
+                    guard let cgImage = image.cgImage,
+                        let openGLContext = EAGLContext(api: .openGLES3) else{
+                            return nil
+                    }
+                    
+                    let context = CIContext(eaglContext:openGLContext)
+                    
+                    let ciImage = CIImage(cgImage: cgImage)
+                    let filter = CIFilter(name: filterEffect.filterName)
+                    
+                    filter?.setValue(ciImage, forKey: kCIInputImageKey)
+                    
+                    if let filterEffectValue = filterEffect.filterEffectValue,
+                        let filterEffectValueName = filterEffect.filterEffectValueName{
+                        filter?.setValue(filterEffectValue, forKey: filterEffectValueName)
+                    }
+                    
+                    var filteredImage:UIImage?
+                    
+                    if let output = filter?.value(forKey: kCIOutputImageKey) as? CIImage,
+                        let cgiImageResult = context.createCGImage(output, from: output.extent){
+                        filteredImage = UIImage(cgImage: cgiImageResult)
+                    }
+                    
+                    return filteredImage
+                }
+                
+//                //how the function above is called was originally called through a button so needs to be adjusted to just be called if the difficulty is correct
+//                @IBAction func comicEffect(_ sender: Any) {
+//                //image should = the reference to the image we are filtering
+//                    guard let image = imgView.image else{
+//                        return
+//                    }
+//               //Sets the imgview to the filter and calls the apply filter function
+//                    imgView.image = applyFilterTo(image: image, filterEffect: Filter(filterName: "CIComicEffect", filterEffectValue: nil, filterEffectValueName: nil))
+//
+//                }
+
+                //End Brendan's Code
                
                 // Use the UIImage returned from Brendan's code instead of "image" blow
                 if let jpgImageDataMedium = image.jpegData(compressionQuality: 0.5){
