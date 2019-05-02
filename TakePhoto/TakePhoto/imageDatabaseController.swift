@@ -10,6 +10,12 @@ import Foundation
 import UIKit
 import SQLite
 
+
+struct ImageDetail {
+    var image: UIImage?
+    var emotion: String?
+}
+
 class imageDatabaseController{
     static let s = imageDatabaseController()
     var imagePicker: UIImagePickerController!
@@ -92,34 +98,73 @@ class imageDatabaseController{
         }
     }
     
-    public func getRandomImage() -> UIImage {
+    
+    public func getRandomImage() -> ImageDetail {
         let randomIndex = Int.random(in: 0 ..< collectionImages.count);
+        var imageDetails = ImageDetail()
         
-        if (difficulty == "hard") {
-            return collectionImages[randomIndex]
-        } else {
-            do {
-                let randomImage = images.filter(date == imageLabels[randomIndex])
-                var imageData = Data()
+        do {
+            let randomImage = images.filter(date == imageLabels[randomIndex])
+            var imageData = Data()
+            
+            for image in try db!.prepare(randomImage){
+                imageDetails.emotion = image[emotion]
                 
-                for image in try db!.prepare(randomImage){
-                    if (difficulty == "easy") {
-                        imageData = try Data(contentsOf: URL(fileURLWithPath: image[filePathEasy]))
-                    } else if (difficulty == "medium") {
-                        imageData = try Data(contentsOf: URL(fileURLWithPath: image[filePathMedium]))
-                    } else {
-                        return UIImage()
-                    }
-                    
-                    let canvasImage = UIImage(data: imageData)
-                    return canvasImage!
+                if (difficulty == "easy") {
+                    imageData = try Data(contentsOf: URL(fileURLWithPath: image[filePathEasy]))
+                } else if (difficulty == "medium") {
+                    imageData = try Data(contentsOf: URL(fileURLWithPath: image[filePathMedium]))
+                } else if (difficulty == "hard") {
+                    imageData = try Data(contentsOf: URL(fileURLWithPath: image[filePathHard]))
                 }
-            } catch {
-                print(error)
+                
+                let canvasImage = UIImage(data: imageData)
+                imageDetails.image = canvasImage
             }
+        } catch {
+            print(error)
         }
-         return UIImage()
+        
+        return ImageDetail(image: UIImage(), emotion: "happiness")
     }
+    
+    
+    
+    
+//    public func getRandomImage() -> Dictionary<String, Any> {
+//        let randomIndex = Int.random(in: 0 ..< collectionImages.count);
+//        var imageDetails = Dictionary<String, Any>()
+//
+//        if (difficulty == "hard") {
+//            return collectionImages[randomIndex]
+//        } else {
+//            do {
+//                let randomImage = images.filter(date == imageLabels[randomIndex])
+//                var imageData = Data()
+//
+//                for image in try db!.prepare(randomImage){
+//                    imageDetails["emotion"] = image[emotion]
+//
+//                    if (difficulty == "easy") {
+//                        imageData = try Data(contentsOf: URL(fileURLWithPath: image[filePathEasy]))
+//                    } else if (difficulty == "medium") {
+//                        imageData = try Data(contentsOf: URL(fileURLWithPath: image[filePathMedium]))
+//                    } else {
+//                        imageDetails["image"] = UIImage()
+//                        return imageDetails
+//                    }
+//
+//                    let canvasImage = UIImage(data: imageData)
+//                    imageDetails["image"] = UIImage()
+//
+//                    return imageDetails
+//                }
+//            } catch {
+//                print(error)
+//            }
+//        }
+//        return UIImage()
+//    }
     
     public func clearDatabase() {
         do {

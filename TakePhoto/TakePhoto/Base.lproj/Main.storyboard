@@ -54,7 +54,7 @@
         <!--Home-->
         <scene sceneID="7ih-Gt-pqp">
             <objects>
-                <viewController title="Home" id="Qox-ab-EES" customClass="ViewController" customModule="TakePhoto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Home" title="Home" id="Qox-ab-EES" customClass="ViewController" customModule="TakePhoto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3uH-TR-BRC">
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -132,11 +132,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ij0-CQ-UH1">
-                                <rect key="frame" x="540" y="693" width="32" height="30"/>
+                                <rect key="frame" x="532" y="740" width="49" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Next"/>
+                                <state key="normal" title="Submit"/>
                                 <connections>
-                                    <action selector="nextButton:" destination="0vS-In-cgf" eventType="touchUpInside" id="cJY-5U-dJl"/>
+                                    <action selector="submitButton:" destination="0vS-In-cgf" eventType="touchUpInside" id="oAc-me-PhD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oiT-Ze-MEx">
@@ -179,12 +179,31 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Happiness"/>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="Dah-U2-Qhd">
+                                <rect key="frame" x="210" y="641" width="692" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Anger"/>
+                                    <segment title="Contempt"/>
+                                    <segment title="Disgust"/>
+                                    <segment title="Fear"/>
+                                    <segment title="Happiness"/>
+                                    <segment title="Neutral"/>
+                                    <segment title="Sadness"/>
+                                    <segment title="Suprise"/>
+                                </segments>
+                                <connections>
+                                    <action selector="indexChanged:" destination="0vS-In-cgf" eventType="valueChanged" id="E8W-7O-Djp"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="ctp-H1-Y9G"/>
                     </view>
                     <connections>
+                        <outlet property="emotionSelect" destination="Dah-U2-Qhd" id="48e-lV-Odc"/>
                         <outlet property="imageView" destination="E8u-z3-84k" id="u4r-1S-EpF"/>
+                        <outlet property="submitButton" destination="Ij0-CQ-UH1" id="lgq-Df-yyi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QDS-Pk-Vsx" sceneMemberID="firstResponder"/>
