@@ -17,6 +17,67 @@ struct ImageDetail {
     var emotion: String?
 }
 
+extension UIImage {
+    
+    func fixOrientation() -> UIImage {
+        
+        // No-op if the orientation is already correct
+        if ( self.imageOrientation == UIImage.Orientation.up ) {
+            return self;
+        }
+        
+        // We need to calculate the proper transformation to make the image upright.
+        // We do it in 2 steps: Rotate if Left/Right/Down, and then flip if Mirrored.
+        var transform: CGAffineTransform = CGAffineTransform.identity
+        
+        if ( self.imageOrientation == UIImage.Orientation.down || self.imageOrientation == UIImage.Orientation.downMirrored ) {
+            transform = transform.translatedBy(x: self.size.width, y: self.size.height)
+            transform = transform.rotated(by: CGFloat(Double.pi))
+        }
+        
+        if ( self.imageOrientation == UIImage.Orientation.left || self.imageOrientation == UIImage.Orientation.leftMirrored ) {
+            transform = transform.translatedBy(x: self.size.width, y: 0)
+            transform = transform.rotated(by: CGFloat(Double.pi / 2.0))
+        }
+        
+        if ( self.imageOrientation == UIImage.Orientation.right || self.imageOrientation == UIImage.Orientation.rightMirrored ) {
+            transform = transform.translatedBy(x: 0, y: self.size.height);
+            transform = transform.rotated(by: CGFloat(-Double.pi / 2.0));
+        }
+        
+        if ( self.imageOrientation == UIImage.Orientation.upMirrored || self.imageOrientation == UIImage.Orientation.downMirrored ) {
+            transform = transform.translatedBy(x: self.size.width, y: 0)
+            transform = transform.scaledBy(x: -1, y: 1)
+        }
+        
+        if ( self.imageOrientation == UIImage.Orientation.leftMirrored || self.imageOrientation == UIImage.Orientation.rightMirrored ) {
+            transform = transform.translatedBy(x: self.size.height, y: 0);
+            transform = transform.scaledBy(x: -1, y: 1);
+        }
+        
+        // Now we draw the underlying CGImage into a new context, applying the transform
+        // calculated above.
+        let ctx: CGContext = CGContext(data: nil, width: Int(self.size.width), height: Int(self.size.height),
+                                       bitsPerComponent: self.cgImage!.bitsPerComponent, bytesPerRow: 0,
+                                       space: self.cgImage!.colorSpace!,
+                                       bitmapInfo: self.cgImage!.bitmapInfo.rawValue)!;
+        
+        ctx.concatenate(transform)
+        
+        if ( self.imageOrientation == UIImage.Orientation.left ||
+            self.imageOrientation == UIImage.Orientation.leftMirrored ||
+            self.imageOrientation == UIImage.Orientation.right ||
+            self.imageOrientation == UIImage.Orientation.rightMirrored ) {
+            ctx.draw(self.cgImage!, in: CGRect(x: 0,y: 0,width: self.size.height,height: self.size.width))
+        } else {
+            ctx.draw(self.cgImage!, in: CGRect(x: 0,y: 0,width: self.size.width,height: self.size.height))
+        }
+        
+        // And now we just create a new UIImage from the drawing context and return it
+        return UIImage(cgImage: ctx.makeImage()!)
+    }
+}
+
 class imageDatabaseController{
     static let s = imageDatabaseController()
     var imagePicker: UIImagePickerController!
@@ -60,6 +121,18 @@ class imageDatabaseController{
          UIImage(named: "image7")!,
          UIImage(named: "image8")!,
          UIImage(named: "image9")!,*/
+    ]
+    
+    var collectionImagesEmojis: [UIImage] = [
+        UIImage(named: "image1")!,
+    ]
+    
+    var collectionImagesShader: [UIImage] = [
+        UIImage(named: "image1")!,
+    ]
+    
+    var collectionImageEmotions: [String] = [
+        "Happiness",
     ]
     
     var selectedImages = [Number]()
@@ -117,73 +190,82 @@ class imageDatabaseController{
         let randomIndex = Int.random(in: 0 ..< collectionImages.count);
         var imageDetails = ImageDetail()
         
-        do {
-            let randomImage = images.filter(date == imageLabels[randomIndex])
-            var imageData = Data()
+        //do {
+            //let randomImage = images.filter(date == imageLabels[randomIndex])
+            //var imageData = Data()
             
-            for image in try db!.prepare(randomImage){
-                imageDetails.emotion = image[emotion]
-                
+            //for image in try db!.prepare(randomImage){
+                //imageDetails.emotion = image[emotion]
+            var canvasImage:UIImage = UIImage()
                 if (difficulty == "easy") {
-                    imageData = try Data(contentsOf: URL(fileURLWithPath: image[filePathEasy]))
+                    //imageData = try Data(contentsOf: URL(fileURLWithPath: collectionImagesEmojis[randomIndex])
+                    canvasImage = collectionImagesEmojis[randomIndex]
                 } else if (difficulty == "medium") {
-                    imageData = try Data(contentsOf: URL(fileURLWithPath: image[filePathMedium]))
+                    //imageData = try Data(contentsOf: URL(fileURLWithPath: collectionImagesShader[randomIndex]))
+                    canvasImage = collectionImagesShader[randomIndex]
                 } else if (difficulty == "hard") {
-                    imageData = try Data(contentsOf: URL(fileURLWithPath: image[filePathHard]))
+                    //imageData = try Data(contentsOf: URL(fileURLWithPath: image[filePathHard]))
+                    canvasImage = collectionImages[randomIndex]
                 }
                 
-                let canvasImage = UIImage(data: imageData)
+               // let canvasImage = UIImage(data: imageData)
                 imageDetails.image = canvasImage
-            }
-        } catch {
-            print(error)
-        }
+                imageDetails.emotion = collectionImageEmotions[randomIndex]
+                
+                return imageDetails
+            //}
+        //} catch {
+         //   print(error)
+        //}
         
-        return ImageDetail(image: UIImage(), emotion: "happiness")
+        //return ImageDetail(image: collectionImages[randomIndex], emotion: "happiness")
     }
     
     
     
     
-//    public func getRandomImage() -> Dictionary<String, Any> {
-//        let randomIndex = Int.random(in: 0 ..< collectionImages.count);
-//        var imageDetails = Dictionary<String, Any>()
-//
-//        if (difficulty == "hard") {
-//            return collectionImages[randomIndex]
-//        } else {
-//            do {
-//                let randomImage = images.filter(date == imageLabels[randomIndex])
-//                var imageData = Data()
-//
-//                for image in try db!.prepare(randomImage){
-//                    imageDetails["emotion"] = image[emotion]
-//
-//                    if (difficulty == "easy") {
-//                        imageData = try Data(contentsOf: URL(fileURLWithPath: image[filePathEasy]))
-//                    } else if (difficulty == "medium") {
-//                        imageData = try Data(contentsOf: URL(fileURLWithPath: image[filePathMedium]))
-//                    } else {
-//                        imageDetails["image"] = UIImage()
-//                        return imageDetails
-//                    }
-//
-//                    let canvasImage = UIImage(data: imageData)
-//                    imageDetails["image"] = UIImage()
-//
-//                    return imageDetails
-//                }
-//            } catch {
-//                print(error)
-//            }
-//        }
-//        return UIImage()
-//    }
+  /*  public func getRandomImage() -> UIImage {
+        let randomIndex = Int.random(in: 0 ..< collectionImages.count);
+        var imageDetails = Dictionary<String, Any>()
+
+        if (difficulty == "hard") {
+            return collectionImages[randomIndex]
+        } else {
+            do {
+                let randomImage = images.filter(date == imageLabels[randomIndex])
+                var imageData = Data()
+
+                for image in try db!.prepare(randomImage){
+                    imageDetails["emotion"] = image[emotion]
+
+                    if (difficulty == "easy") {
+                        imageData = try Data(contentsOf: URL(fileURLWithPath: image[filePathEasy]))
+                    } else if (difficulty == "medium") {
+                        imageData = try Data(contentsOf: URL(fileURLWithPath: image[filePathMedium]))
+                    } else {
+                        imageDetails["image"] = UIImage()
+                        return imageDetails
+                    }
+
+                    let canvasImage = UIImage(data: imageData)
+                    imageDetails["image"] = UIImage()
+
+                    return imageDetails
+                }
+            } catch {
+                print(error)
+            }
+        }
+        return UIImage()
+    }*/
     
     public func clearDatabase() {
         do {
             try db!.run(images.delete())
             collectionImages = [UIImage]()
+            collectionImagesEmojis = [UIImage]()
+            collectionImagesShader = [UIImage]()
+            collectionImageEmotions = [String]() 
             imageLabels = [String]() 
         } catch {
            print(error)
@@ -261,7 +343,8 @@ class imageDatabaseController{
                 
 
                 //Sets the imgview to the filter and calls the apply filter function
-                let comicImage = applyFilterTo(image: image, filterEffect: Filter(filterName: "CIComicEffect", filterEffectValue: nil, filterEffectValueName: nil))
+                var correctlyOrientedImage = image.fixOrientation()
+                let comicImage = applyFilterTo(image: correctlyOrientedImage, filterEffect: Filter(filterName: "CIComicEffect", filterEffectValue: nil, filterEffectValueName: nil))
                 if let jpgImageDataMedium = comicImage!.jpegData(compressionQuality: 0.5){
                     try jpgImageDataMedium.write(to: URLStringMedium)
                 }
@@ -282,15 +365,24 @@ class imageDatabaseController{
             // SELECT * FROM "users"
             
             let insertedPhoto = images.filter(filePathEasy == newFileUrlEasy)
-            for emotion in try db!.prepare(insertedPhoto){
+            for image in try db!.prepare(insertedPhoto){
                 
-                print("filePathHard: \(emotion[filePathHard])")
-                let imageData = try Data(contentsOf: URL(fileURLWithPath: emotion[filePathHard]))
+                print("filePathHard: \(image[filePathHard])")
+                let imageData = try Data(contentsOf: URL(fileURLWithPath: image[filePathHard]))
                 let canvasImage = UIImage(data: imageData)
+                
+                let imageDataEmoji = try Data(contentsOf: URL(fileURLWithPath: image[filePathEasy]))
+                let canvasImageEmoji = UIImage(data: imageDataEmoji)
+                
+                let imageDataShader = try Data(contentsOf: URL(fileURLWithPath: image[filePathMedium]))
+                let canvasImageShader = UIImage(data: imageDataShader)
                 //self.imageView.image = canvasImage
                 //try db!.run(angry.delete())
                 
                 collectionImages.append(canvasImage!)
+                collectionImagesEmojis.append(canvasImageEmoji!)
+                collectionImagesShader.append(canvasImageShader!)
+                collectionImageEmotions.append(image[emotion])
                 imageLabels.append(fullDate)
                 
             }

@@ -40,7 +40,7 @@ class PlaceFaceEmojis {
         //*********These are the images that match with each pre determined emotion**********
         angerPair = EmotionImagePair(emotion: "Anger", url: Bundle.main.url(forResource: "anger1", withExtension: "png")!, path: Bundle.main.path(forResource: "anger1", ofType: "png")!)
         
-        happyPair = EmotionImagePair(emotion: "Happy", url: Bundle.main.url(forResource: "happiness", withExtension: "png")!, path: Bundle.main.path(forResource: "happiness", ofType: "png")!)
+        happyPair = EmotionImagePair(emotion: "Happiness", url: Bundle.main.url(forResource: "happiness", withExtension: "png")!, path: Bundle.main.path(forResource: "happiness", ofType: "png")!)
         
         neutralPair = EmotionImagePair(emotion: "Neutral", url: Bundle.main.url(forResource: "neutral", withExtension: "png")!, path: Bundle.main.path(forResource: "neutral", ofType: "png")!)
         

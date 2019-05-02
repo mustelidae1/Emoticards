@@ -13,7 +13,7 @@
         <!--Camera-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Camera" id="BYZ-38-t0r" customClass="CameraController" customModule="TakePhoto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Camera" modalTransitionStyle="crossDissolve" id="BYZ-38-t0r" customClass="CameraController" customModule="TakePhoto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,7 +35,7 @@
                                     <segue destination="Qox-ab-EES" kind="show" id="FxU-Az-KsW"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RRU-Q9-Yox">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RRU-Q9-Yox">
                                 <rect key="frame" x="379" y="87" width="350" height="350"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -54,7 +54,7 @@
         <!--Home-->
         <scene sceneID="7ih-Gt-pqp">
             <objects>
-                <viewController storyboardIdentifier="Home" title="Home" id="Qox-ab-EES" customClass="ViewController" customModule="TakePhoto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Home" title="Home" modalTransitionStyle="crossDissolve" id="Qox-ab-EES" customClass="ViewController" customModule="TakePhoto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3uH-TR-BRC">
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -107,7 +107,7 @@
         <!--Flashcards-->
         <scene sceneID="sir-Ur-7tq">
             <objects>
-                <viewController title="Flashcards" id="0vS-In-cgf" customClass="flashcardController" customModule="TakePhoto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Flashcards" modalTransitionStyle="crossDissolve" id="0vS-In-cgf" customClass="flashcardController" customModule="TakePhoto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="843-zQ-hgk">
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -127,8 +127,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E8u-z3-84k">
-                                <rect key="frame" x="352" y="237" width="409" height="360"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E8u-z3-84k">
+                                <rect key="frame" x="352" y="182" width="409" height="360"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ij0-CQ-UH1">
@@ -138,46 +138,6 @@
                                 <connections>
                                     <action selector="submitButton:" destination="0vS-In-cgf" eventType="touchUpInside" id="oAc-me-PhD"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oiT-Ze-MEx">
-                                <rect key="frame" x="203" y="224" width="42" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Anger"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jeP-ym-sPg">
-                                <rect key="frame" x="199" y="475" width="51" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Neutral"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sk1-r1-TfA">
-                                <rect key="frame" x="199" y="528" width="59" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Sadness"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIY-ii-yDZ">
-                                <rect key="frame" x="190" y="277" width="69" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Contempt"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uYV-OF-1ng">
-                                <rect key="frame" x="198" y="331" width="52" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Disgust"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zcY-nn-64t">
-                                <rect key="frame" x="203" y="581" width="52" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Suprise"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CFP-iB-Oho">
-                                <rect key="frame" x="209" y="378" width="31" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Fear"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ryJ-7g-avu">
-                                <rect key="frame" x="188" y="427" width="73" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Happiness"/>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="Dah-U2-Qhd">
                                 <rect key="frame" x="210" y="641" width="692" height="29"/>
@@ -213,7 +173,7 @@
         <!--DifficultyScene-->
         <scene sceneID="KRc-O3-4Bx">
             <objects>
-                <viewController title="DifficultyScene" id="jGA-lz-JsK" customClass="DifficultySelectController" customModule="TakePhoto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="DifficultyScene" modalTransitionStyle="crossDissolve" id="jGA-lz-JsK" customClass="DifficultySelectController" customModule="TakePhoto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qon-0r-ck1">
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -275,7 +235,7 @@
         <!--Settings-->
         <scene sceneID="dRX-I9-tlV">
             <objects>
-                <viewController title="Settings" id="mZr-wN-aDd" customClass="SettingsViewController" customModule="TakePhoto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Settings" modalTransitionStyle="crossDissolve" id="mZr-wN-aDd" customClass="SettingsViewController" customModule="TakePhoto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Oq2-BR-VCs">
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -352,6 +312,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="2NM-Zg-q9e"/>
-        <segue reference="p16-aJ-qFk"/>
+        <segue reference="NXt-oO-qjb"/>
     </inferredMetricsTieBreakers>
 </document>

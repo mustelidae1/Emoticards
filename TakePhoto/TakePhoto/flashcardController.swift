@@ -28,7 +28,7 @@ class flashcardController: UIViewController {
     @IBAction func submitButton(_ sender: Any) {
         checkGuess()
         resetView()
-        getImage()
+        //getImage()
     }
     
     @IBAction func indexChanged(_ sender: Any) {
@@ -49,6 +49,9 @@ class flashcardController: UIViewController {
         print(newImageDetails)
         imageView.image = newImageDetails.image
         correctEmotion = newImageDetails.emotion!
+        correctEmotion = correctEmotion.lowercased()
+        
+        print("Correct emotion: " + correctEmotion)
     }
     
     func checkGuess() {
@@ -86,8 +89,8 @@ class flashcardController: UIViewController {
             }
         }
         
-        let dialogMessage = UIAlertController(title: "\(response)", message: "Continue to next flashcard?", preferredStyle: .alert)
-        let yes = UIAlertAction(title: "Yes", style: .default, handler: { (action) -> Void in
+        let dialogMessage = UIAlertController(title: "\(response)", message: "", preferredStyle: .alert)
+        let yes = UIAlertAction(title: "Ok", style: .default, handler: { (action) -> Void in
             print("Go to next flashcard")
             self.resetView()
             self.getImage()
@@ -100,7 +103,7 @@ class flashcardController: UIViewController {
         }
         
         dialogMessage.addAction(yes)
-        dialogMessage.addAction(no)
+        //dialogMessage.addAction(no)
         
         self.present(dialogMessage, animated: true, completion: nil)
     }
