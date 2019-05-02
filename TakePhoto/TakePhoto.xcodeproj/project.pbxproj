@@ -13,6 +13,16 @@
 		310DF2F922722614008B7FCD /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310DF2F822722614008B7FCD /* CameraController.swift */; };
 		313E01B82278F9D90010C80A /* DifficultySelectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313E01B72278F9D90010C80A /* DifficultySelectController.swift */; };
 		313E01C02278FB770010C80A /* flashcardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313E01BF2278FB770010C80A /* flashcardController.swift */; };
+		313E01CE227B7C0A0010C80A /* AzureUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313E01CC227B7C0A0010C80A /* AzureUtilities.swift */; };
+		313E01D0227B7CDB0010C80A /* EmotionUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313E01CF227B7CDA0010C80A /* EmotionUtilities.swift */; };
+		313E01DA227B8B930010C80A /* disgust.png in Resources */ = {isa = PBXBuildFile; fileRef = 313E01D2227B8B920010C80A /* disgust.png */; };
+		313E01DB227B8B930010C80A /* fear.png in Resources */ = {isa = PBXBuildFile; fileRef = 313E01D3227B8B920010C80A /* fear.png */; };
+		313E01DC227B8B930010C80A /* happiness.png in Resources */ = {isa = PBXBuildFile; fileRef = 313E01D4227B8B920010C80A /* happiness.png */; };
+		313E01DD227B8B930010C80A /* neutral.png in Resources */ = {isa = PBXBuildFile; fileRef = 313E01D5227B8B920010C80A /* neutral.png */; };
+		313E01DE227B8B930010C80A /* suprise.png in Resources */ = {isa = PBXBuildFile; fileRef = 313E01D6227B8B920010C80A /* suprise.png */; };
+		313E01DF227B8B930010C80A /* sadness.png in Resources */ = {isa = PBXBuildFile; fileRef = 313E01D7227B8B920010C80A /* sadness.png */; };
+		313E01E0227B8B930010C80A /* contempt.png in Resources */ = {isa = PBXBuildFile; fileRef = 313E01D8227B8B920010C80A /* contempt.png */; };
+		313E01E1227B8B930010C80A /* anger1.png in Resources */ = {isa = PBXBuildFile; fileRef = 313E01D9227B8B920010C80A /* anger1.png */; };
 		31FCDCD6226FC9CB00A1E292 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FCDCBA226FC7D700A1E292 /* SQLite.framework */; };
 		31FCDCD7226FC9D000A1E292 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FCDCBA226FC7D700A1E292 /* SQLite.framework */; };
 		31FCDCD8226FC9D000A1E292 /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 31FCDCBA226FC7D700A1E292 /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -121,6 +131,16 @@
 		310DF2F822722614008B7FCD /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
 		313E01B72278F9D90010C80A /* DifficultySelectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultySelectController.swift; sourceTree = "<group>"; };
 		313E01BF2278FB770010C80A /* flashcardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flashcardController.swift; sourceTree = "<group>"; };
+		313E01CC227B7C0A0010C80A /* AzureUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AzureUtilities.swift; sourceTree = "<group>"; };
+		313E01CF227B7CDA0010C80A /* EmotionUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotionUtilities.swift; sourceTree = "<group>"; };
+		313E01D2227B8B920010C80A /* disgust.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disgust.png; sourceTree = "<group>"; };
+		313E01D3227B8B920010C80A /* fear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fear.png; sourceTree = "<group>"; };
+		313E01D4227B8B920010C80A /* happiness.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = happiness.png; sourceTree = "<group>"; };
+		313E01D5227B8B920010C80A /* neutral.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = neutral.png; sourceTree = "<group>"; };
+		313E01D6227B8B920010C80A /* suprise.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = suprise.png; sourceTree = "<group>"; };
+		313E01D7227B8B920010C80A /* sadness.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sadness.png; sourceTree = "<group>"; };
+		313E01D8227B8B920010C80A /* contempt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contempt.png; sourceTree = "<group>"; };
+		313E01D9227B8B920010C80A /* anger1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = anger1.png; sourceTree = "<group>"; };
 		31FCDCAF226FC7D700A1E292 /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "../../../Downloads/SQLite-2.swift-master/SQLite.xcodeproj"; sourceTree = "<group>"; };
 		4F1DC8552266A82B0071A564 /* TakePhoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TakePhoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F1DC8582266A82B0071A564 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -162,6 +182,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		313E01D1227B8B7E0010C80A /* EmotionImages */ = {
+			isa = PBXGroup;
+			children = (
+				313E01D8227B8B920010C80A /* contempt.png */,
+				313E01D2227B8B920010C80A /* disgust.png */,
+				313E01D3227B8B920010C80A /* fear.png */,
+				313E01D4227B8B920010C80A /* happiness.png */,
+				313E01D5227B8B920010C80A /* neutral.png */,
+				313E01D7227B8B920010C80A /* sadness.png */,
+				313E01D6227B8B920010C80A /* suprise.png */,
+				313E01D9227B8B920010C80A /* anger1.png */,
+			);
+			path = EmotionImages;
+			sourceTree = "<group>";
+		};
 		31FCDCB0226FC7D700A1E292 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +239,9 @@
 		4F1DC8572266A82B0071A564 /* TakePhoto */ = {
 			isa = PBXGroup;
 			children = (
+				313E01D1227B8B7E0010C80A /* EmotionImages */,
+				313E01CF227B7CDA0010C80A /* EmotionUtilities.swift */,
+				313E01CC227B7C0A0010C80A /* AzureUtilities.swift */,
 				310DF2EE2272169C008B7FCD /* SettingsViewController.swift */,
 				310DF2F622721B79008B7FCD /* imageDatabaseController.swift */,
 				310DF2EB2271E239008B7FCD /* CollectionViewCell.swift */,
@@ -364,7 +402,9 @@
 				4F1DC8632266A8340071A564 /* LaunchScreen.storyboard in Resources */,
 				DDCE209A2269357000A72974 /* back@3x.png in Resources */,
 				4F1DC8602266A8340071A564 /* Assets.xcassets in Resources */,
+				313E01DA227B8B930010C80A /* disgust.png in Resources */,
 				DDCE20AA2269362300A72974 /* folder@2x.png in Resources */,
+				313E01DB227B8B930010C80A /* fear.png in Resources */,
 				DDCE20932269353B00A72974 /* Symbol 275@3x.png in Resources */,
 				DDCE20912269353B00A72974 /* Symbol 275.png in Resources */,
 				4F1DC85E2266A82B0071A564 /* Main.storyboard in Resources */,
@@ -372,10 +412,16 @@
 				DDCE20982269357000A72974 /* back.png in Resources */,
 				DDCE209F226935A300A72974 /* camera button.png in Resources */,
 				DDCE20922269353B00A72974 /* Symbol 275@2x.png in Resources */,
+				313E01DD227B8B930010C80A /* neutral.png in Resources */,
 				DDCE20A0226935A300A72974 /* camera button@2x.png in Resources */,
+				313E01DE227B8B930010C80A /* suprise.png in Resources */,
+				313E01E1227B8B930010C80A /* anger1.png in Resources */,
 				DDCE20B2226936DC00A72974 /* settings@2x.png in Resources */,
+				313E01E0227B8B930010C80A /* contempt.png in Resources */,
+				313E01DC227B8B930010C80A /* happiness.png in Resources */,
 				DDCE20B1226936DC00A72974 /* settings.png in Resources */,
 				DDCE20B0226936DC00A72974 /* settings@3x.png in Resources */,
+				313E01DF227B8B930010C80A /* sadness.png in Resources */,
 				DDCE209E226935A300A72974 /* camera button@3x.png in Resources */,
 				DDCE20A62269360600A72974 /* confirm@2x.png in Resources */,
 			);
@@ -392,9 +438,11 @@
 				313E01B82278F9D90010C80A /* DifficultySelectController.swift in Sources */,
 				310DF2F922722614008B7FCD /* CameraController.swift in Sources */,
 				4F1DC85B2266A82B0071A564 /* ViewController.swift in Sources */,
+				313E01D0227B7CDB0010C80A /* EmotionUtilities.swift in Sources */,
 				4F1DC8592266A82B0071A564 /* AppDelegate.swift in Sources */,
 				310DF2EC2271E239008B7FCD /* CollectionViewCell.swift in Sources */,
 				310DF2F722721B7A008B7FCD /* imageDatabaseController.swift in Sources */,
+				313E01CE227B7C0A0010C80A /* AzureUtilities.swift in Sources */,
 				310DF2EF2272169C008B7FCD /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

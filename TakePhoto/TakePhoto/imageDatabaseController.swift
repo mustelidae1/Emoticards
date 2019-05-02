@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import SQLite
+import CoreImage
 
 class imageDatabaseController{
     static let s = imageDatabaseController()
@@ -28,6 +29,19 @@ class imageDatabaseController{
     var imageLabels = ["image1"]
     
     var difficulty = "easy"
+    
+    //Setup a simple way to choose effect values
+    struct Filter {
+        let filterName:String
+        var filterEffectValue:Any?
+        var filterEffectValueName:String?
+        
+        init(filterName: String, filterEffectValue: Any?, filterEffectValueName:String?) {
+            self.filterName = filterName
+            self.filterEffectValue = filterEffectValue
+            self.filterEffectValueName = filterEffectValueName
+        }
+    }
     
     // The names here are the names of the image files in Assets.xcassets
     var collectionImages: [UIImage] = [
@@ -155,13 +169,13 @@ class imageDatabaseController{
     
 
     
-    func savePhotoController(image: UIImage) {
+    func savePhotoController(image: UIImage, emojiImage: UIImage, imageEmotion: String) {
         //imagePicker.dismiss(animated: true, completion: nil)
         //imageView.image = image
         
         
         // do azure stuff
-        let pictureEmotion = "angry"
+        let pictureEmotion = imageEmotion
         
         do {
             
@@ -189,23 +203,21 @@ class imageDatabaseController{
             
             //try FileManager.default.createDirectory(at: newFileUrlEasy, withIntermediateDirectories: true, attributes: nil)
             
-            print(newFileUrlEasy)
+            //print(newFileUrlEasy)
             
             do {
                 // TODO
                 // add emoji here
                 // Call Issiac's code here
                 // Use the UIImage returned from Issiac's code instead of "image" below
-                if let jpgImageDataEasy = image.jpegData(compressionQuality: 0.5){
+                if let jpgImageDataEasy = emojiImage.jpegData(compressionQuality: 0.5){
                     try jpgImageDataEasy.write(to: URLStringEasy)
                 }
                 
-                // TODO
-                // add shader here
-                // Call Brendan's code here
-               
-                // Use the UIImage returned from Brendan's code instead of "image" blow
-                if let jpgImageDataMedium = image.jpegData(compressionQuality: 0.5){
+
+                //Sets the imgview to the filter and calls the apply filter function
+                let comicImage = applyFilterTo(image: image, filterEffect: Filter(filterName: "CIComicEffect", filterEffectValue: nil, filterEffectValueName: nil))
+                if let jpgImageDataMedium = comicImage!.jpegData(compressionQuality: 0.5){
                     try jpgImageDataMedium.write(to: URLStringMedium)
                 }
                 
@@ -213,7 +225,6 @@ class imageDatabaseController{
                 if let jpgImageDataHard = image.jpegData(compressionQuality: 0.5){
                     try jpgImageDataHard.write(to: URLStringHard)
                 }
-                
             }
             
             let insert = images.insert(date <- fullDate, filePathEasy <- newFileUrlEasy, filePathMedium <- newFileUrlMedium, filePathHard <- newFileUrlHard, emotion <- pictureEmotion)
@@ -254,6 +265,36 @@ class imageDatabaseController{
         } catch {
             print(error)
         }
+    }
+    
+    //Function that atually applies the filters. should be called when we want ta filter applied
+    func applyFilterTo(image: UIImage, filterEffect: Filter)-> UIImage?{
+        
+        guard let cgImage = image.cgImage,
+            let openGLContext = EAGLContext(api: .openGLES3) else{
+                return nil
+        }
+        
+        let context = CIContext(eaglContext:openGLContext)
+        
+        let ciImage = CIImage(cgImage: cgImage)
+        let filter = CIFilter(name: filterEffect.filterName)
+        
+        filter?.setValue(ciImage, forKey: kCIInputImageKey)
+        
+        if let filterEffectValue = filterEffect.filterEffectValue,
+            let filterEffectValueName = filterEffect.filterEffectValueName{
+            filter?.setValue(filterEffectValue, forKey: filterEffectValueName)
+        }
+        
+        var filteredImage:UIImage?
+        
+        if let output = filter?.value(forKey: kCIOutputImageKey) as? CIImage,
+            let cgiImageResult = context.createCGImage(output, from: output.extent){
+            filteredImage = UIImage(cgImage: cgiImageResult)
+        }
+        
+        return filteredImage
     }
 }
 
