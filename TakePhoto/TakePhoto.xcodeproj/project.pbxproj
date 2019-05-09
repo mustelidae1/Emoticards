@@ -21,7 +21,20 @@
 		31159054227B93600037FC30 /* contempt.png in Resources */ = {isa = PBXBuildFile; fileRef = 3115904C227B93600037FC30 /* contempt.png */; };
 		31159055227B93600037FC30 /* happiness.png in Resources */ = {isa = PBXBuildFile; fileRef = 3115904D227B93600037FC30 /* happiness.png */; };
 		31159056227B93600037FC30 /* fear.png in Resources */ = {isa = PBXBuildFile; fileRef = 3115904E227B93600037FC30 /* fear.png */; };
-		31159057227B93600037FC30 /* suprise.png in Resources */ = {isa = PBXBuildFile; fileRef = 3115904F227B93600037FC30 /* suprise.png */; };
+		31159057227B93600037FC30 /* surprise.png in Resources */ = {isa = PBXBuildFile; fileRef = 3115904F227B93600037FC30 /* surprise.png */; };
+		3115906C228229E10037FC30 /* gimm310appBackIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 31159060228229E00037FC30 /* gimm310appBackIcon.png */; };
+		3115906D228229E10037FC30 /* gimm310appFolderIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 31159067228229E00037FC30 /* gimm310appFolderIcon.png */; };
+		3115906E228229E10037FC30 /* gimm310appHomeIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 31159068228229E00037FC30 /* gimm310appHomeIcon.png */; };
+		3115906F228229E10037FC30 /* gimm310appSettingsIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 31159069228229E00037FC30 /* gimm310appSettingsIcon.png */; };
+		31159070228229E10037FC30 /* gimm310appBackGround.png in Resources */ = {isa = PBXBuildFile; fileRef = 3115906A228229E00037FC30 /* gimm310appBackGround.png */; };
+		31159071228229E10037FC30 /* gimm310appCameraIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3115906B228229E10037FC30 /* gimm310appCameraIcon.png */; };
+		31159079228248120037FC30 /* cartoon.png in Resources */ = {isa = PBXBuildFile; fileRef = 31159072228248100037FC30 /* cartoon.png */; };
+		3115907A228248120037FC30 /* Flashcards.png in Resources */ = {isa = PBXBuildFile; fileRef = 31159073228248100037FC30 /* Flashcards.png */; };
+		3115907B228248120037FC30 /* Emoji.png in Resources */ = {isa = PBXBuildFile; fileRef = 31159074228248110037FC30 /* Emoji.png */; };
+		3115907C228248120037FC30 /* Submit.png in Resources */ = {isa = PBXBuildFile; fileRef = 31159075228248110037FC30 /* Submit.png */; };
+		3115907D228248120037FC30 /* takePhoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 31159076228248110037FC30 /* takePhoto.png */; };
+		3115907E228248120037FC30 /* ChooseDiff.png in Resources */ = {isa = PBXBuildFile; fileRef = 31159077228248110037FC30 /* ChooseDiff.png */; };
+		3115907F228248120037FC30 /* realistic.png in Resources */ = {isa = PBXBuildFile; fileRef = 31159078228248110037FC30 /* realistic.png */; };
 		313E01B82278F9D90010C80A /* DifficultySelectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313E01B72278F9D90010C80A /* DifficultySelectController.swift */; };
 		313E01C02278FB770010C80A /* flashcardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313E01BF2278FB770010C80A /* flashcardController.swift */; };
 		313E01CE227B7C0A0010C80A /* AzureUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313E01CC227B7C0A0010C80A /* AzureUtilities.swift */; };
@@ -137,7 +150,20 @@
 		3115904C227B93600037FC30 /* contempt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = contempt.png; path = ../../../../../Downloads/customEmojisFixed/contempt.png; sourceTree = "<group>"; };
 		3115904D227B93600037FC30 /* happiness.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = happiness.png; path = ../../../../../Downloads/customEmojisFixed/happiness.png; sourceTree = "<group>"; };
 		3115904E227B93600037FC30 /* fear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fear.png; path = ../../../../../Downloads/customEmojisFixed/fear.png; sourceTree = "<group>"; };
-		3115904F227B93600037FC30 /* suprise.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = suprise.png; path = ../../../../../Downloads/customEmojisFixed/suprise.png; sourceTree = "<group>"; };
+		3115904F227B93600037FC30 /* surprise.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = surprise.png; path = ../../../../../Downloads/customEmojisFixed/surprise.png; sourceTree = "<group>"; };
+		31159060228229E00037FC30 /* gimm310appBackIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gimm310appBackIcon.png; path = ../../gimm310appBackIcon.png; sourceTree = "<group>"; };
+		31159067228229E00037FC30 /* gimm310appFolderIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gimm310appFolderIcon.png; path = ../../gimm310appFolderIcon.png; sourceTree = "<group>"; };
+		31159068228229E00037FC30 /* gimm310appHomeIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gimm310appHomeIcon.png; path = ../../gimm310appHomeIcon.png; sourceTree = "<group>"; };
+		31159069228229E00037FC30 /* gimm310appSettingsIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gimm310appSettingsIcon.png; path = ../../gimm310appSettingsIcon.png; sourceTree = "<group>"; };
+		3115906A228229E00037FC30 /* gimm310appBackGround.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gimm310appBackGround.png; path = ../../gimm310appBackGround.png; sourceTree = "<group>"; };
+		3115906B228229E10037FC30 /* gimm310appCameraIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gimm310appCameraIcon.png; path = ../../gimm310appCameraIcon.png; sourceTree = "<group>"; };
+		31159072228248100037FC30 /* cartoon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cartoon.png; sourceTree = "<group>"; };
+		31159073228248100037FC30 /* Flashcards.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Flashcards.png; sourceTree = "<group>"; };
+		31159074228248110037FC30 /* Emoji.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Emoji.png; sourceTree = "<group>"; };
+		31159075228248110037FC30 /* Submit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Submit.png; sourceTree = "<group>"; };
+		31159076228248110037FC30 /* takePhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = takePhoto.png; sourceTree = "<group>"; };
+		31159077228248110037FC30 /* ChooseDiff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ChooseDiff.png; sourceTree = "<group>"; };
+		31159078228248110037FC30 /* realistic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = realistic.png; sourceTree = "<group>"; };
 		313E01B72278F9D90010C80A /* DifficultySelectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultySelectController.swift; sourceTree = "<group>"; };
 		313E01BF2278FB770010C80A /* flashcardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flashcardController.swift; sourceTree = "<group>"; };
 		313E01CC227B7C0A0010C80A /* AzureUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AzureUtilities.swift; sourceTree = "<group>"; };
@@ -206,7 +232,7 @@
 				3115904D227B93600037FC30 /* happiness.png */,
 				31159049227B93600037FC30 /* neutral.png */,
 				31159048227B93600037FC30 /* sadness.png */,
-				3115904F227B93600037FC30 /* suprise.png */,
+				3115904F227B93600037FC30 /* surprise.png */,
 			);
 			path = EmotionImages;
 			sourceTree = "<group>";
@@ -251,14 +277,27 @@
 				313E01B72278F9D90010C80A /* DifficultySelectController.swift */,
 				313E01BF2278FB770010C80A /* flashcardController.swift */,
 				4F1DC85C2266A82B0071A564 /* Main.storyboard */,
+				3115906A228229E00037FC30 /* gimm310appBackGround.png */,
 				4F1DC85F2266A8340071A564 /* Assets.xcassets */,
 				DDCE20AE226936DC00A72974 /* settings.png */,
+				31159072228248100037FC30 /* cartoon.png */,
+				31159077228248110037FC30 /* ChooseDiff.png */,
+				31159074228248110037FC30 /* Emoji.png */,
+				31159073228248100037FC30 /* Flashcards.png */,
+				31159078228248110037FC30 /* realistic.png */,
+				31159075228248110037FC30 /* Submit.png */,
+				31159076228248110037FC30 /* takePhoto.png */,
 				DDCE20AF226936DC00A72974 /* settings@2x.png */,
 				DDCE20AD226936DC00A72974 /* settings@3x.png */,
 				DDCE20A92269362300A72974 /* folder.png */,
 				DDCE20A72269362200A72974 /* folder@2x.png */,
 				DDCE20A82269362300A72974 /* folder@3x.png */,
 				DDCE20A22269360500A72974 /* confirm.png */,
+				31159060228229E00037FC30 /* gimm310appBackIcon.png */,
+				3115906B228229E10037FC30 /* gimm310appCameraIcon.png */,
+				31159067228229E00037FC30 /* gimm310appFolderIcon.png */,
+				31159068228229E00037FC30 /* gimm310appHomeIcon.png */,
+				31159069228229E00037FC30 /* gimm310appSettingsIcon.png */,
 				DDCE20A32269360600A72974 /* confirm@2x.png */,
 				DDCE20A12269360500A72974 /* confirm@3x.png */,
 				DDCE209C226935A300A72974 /* camera button.png */,
@@ -401,29 +440,42 @@
 				31159052227B93600037FC30 /* anger1.png in Resources */,
 				DDCE20A52269360600A72974 /* confirm.png in Resources */,
 				31159056227B93600037FC30 /* fear.png in Resources */,
+				3115906D228229E10037FC30 /* gimm310appFolderIcon.png in Resources */,
 				4F1DC8632266A8340071A564 /* LaunchScreen.storyboard in Resources */,
 				31159051227B93600037FC30 /* neutral.png in Resources */,
 				DDCE209A2269357000A72974 /* back@3x.png in Resources */,
 				4F1DC8602266A8340071A564 /* Assets.xcassets in Resources */,
 				DDCE20AA2269362300A72974 /* folder@2x.png in Resources */,
+				3115907B228248120037FC30 /* Emoji.png in Resources */,
 				DDCE20932269353B00A72974 /* Symbol 275@3x.png in Resources */,
 				DDCE20912269353B00A72974 /* Symbol 275.png in Resources */,
 				4F1DC85E2266A82B0071A564 /* Main.storyboard in Resources */,
 				DDCE20AC2269362300A72974 /* folder.png in Resources */,
+				31159079228248120037FC30 /* cartoon.png in Resources */,
 				DDCE20982269357000A72974 /* back.png in Resources */,
 				DDCE209F226935A300A72974 /* camera button.png in Resources */,
 				31159055227B93600037FC30 /* happiness.png in Resources */,
+				31159071228229E10037FC30 /* gimm310appCameraIcon.png in Resources */,
+				3115907F228248120037FC30 /* realistic.png in Resources */,
 				DDCE20922269353B00A72974 /* Symbol 275@2x.png in Resources */,
 				31159054227B93600037FC30 /* contempt.png in Resources */,
+				3115906C228229E10037FC30 /* gimm310appBackIcon.png in Resources */,
 				DDCE20A0226935A300A72974 /* camera button@2x.png in Resources */,
+				3115906F228229E10037FC30 /* gimm310appSettingsIcon.png in Resources */,
 				DDCE20B2226936DC00A72974 /* settings@2x.png in Resources */,
 				DDCE20B1226936DC00A72974 /* settings.png in Resources */,
 				DDCE20B0226936DC00A72974 /* settings@3x.png in Resources */,
+				3115906E228229E10037FC30 /* gimm310appHomeIcon.png in Resources */,
+				3115907E228248120037FC30 /* ChooseDiff.png in Resources */,
 				DDCE209E226935A300A72974 /* camera button@3x.png in Resources */,
 				DDCE20A62269360600A72974 /* confirm@2x.png in Resources */,
+				31159070228229E10037FC30 /* gimm310appBackGround.png in Resources */,
 				31159053227B93600037FC30 /* disgust.png in Resources */,
-				31159057227B93600037FC30 /* suprise.png in Resources */,
+				31159057227B93600037FC30 /* surprise.png in Resources */,
+				3115907C228248120037FC30 /* Submit.png in Resources */,
+				3115907A228248120037FC30 /* Flashcards.png in Resources */,
 				31159050227B93600037FC30 /* sadness.png in Resources */,
+				3115907D228248120037FC30 /* takePhoto.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

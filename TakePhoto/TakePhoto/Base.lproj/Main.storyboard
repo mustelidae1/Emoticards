@@ -18,19 +18,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4gx-cU-aj7">
-                                <rect key="frame" x="440" y="499" width="232" height="72"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gimm310appBackGround.png" translatesAutoresizingMaskIntoConstraints="NO" id="Tbc-Qa-5ds">
+                                <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
-                                <state key="normal" title="Take Photo"/>
-                                <connections>
-                                    <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tOP-r0-Fcf"/>
-                                </connections>
-                            </button>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Di4-Yr-jOu">
-                                <rect key="frame" x="20" y="665" width="151" height="149"/>
+                                <rect key="frame" x="20" y="692" width="124" height="122"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="back.png"/>
+                                <state key="normal" image="gimm310appBackIcon.png"/>
                                 <connections>
                                     <segue destination="Qox-ab-EES" kind="show" id="FxU-Az-KsW"/>
                                 </connections>
@@ -39,6 +34,16 @@
                                 <rect key="frame" x="379" y="87" width="350" height="350"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4gx-cU-aj7">
+                                <rect key="frame" x="348" y="481" width="416" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="takePhoto.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tOP-r0-Fcf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -59,30 +64,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gimm310appBackGround.png" translatesAutoresizingMaskIntoConstraints="NO" id="hgv-yW-bq2">
+                                <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rNb-qn-bDU">
-                                <rect key="frame" x="165" y="292" width="250" height="250"/>
+                                <rect key="frame" x="187" y="311" width="252" height="207"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <state key="normal" image="Symbol 275.png"/>
+                                <state key="normal" image="gimm310appCameraIcon.png"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="9uA-w8-ypw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1t-f3-Bpl">
-                                <rect key="frame" x="28" y="29" width="149" height="119"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
-                                <state key="normal" title="Settings">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <segue destination="mZr-wN-aDd" kind="show" id="LVY-xT-XCW"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mqm-QA-LLq">
-                                <rect key="frame" x="709" y="292" width="250" height="250"/>
+                                <rect key="frame" x="680" y="318" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                <state key="normal" image="folder.png"/>
+                                <state key="normal" image="gimm310appFolderIcon.png"/>
                                 <connections>
                                     <segue destination="jGA-lz-JsK" kind="show" id="BwC-1D-krq"/>
                                 </connections>
@@ -90,13 +88,26 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XlW-Dd-kEf">
                                 <rect key="frame" x="36" y="767" width="157" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Delete Entire Database"/>
+                                <state key="normal" title="Delete Entire Database">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="clearDatabase:" destination="Qox-ab-EES" eventType="touchUpInside" id="YV3-v8-jas"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1t-f3-Bpl">
+                                <rect key="frame" x="273" y="33" width="81" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                                <state key="normal" image="gimm310appSettingsIcon.png">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="mZr-wN-aDd" kind="show" id="LVY-xT-XCW"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.45033115148544312" green="0.6003989577293396" blue="0.47786074876785278" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="AZR-Zs-NJy"/>
                     </view>
                 </viewController>
@@ -112,36 +123,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acW-Pv-oZB">
-                                <rect key="frame" x="20" y="583" width="250" height="250"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gimm310appBackGround.png" translatesAutoresizingMaskIntoConstraints="NO" id="rGE-9N-kp6">
+                                <rect key="frame" x="-2" y="-7" width="1134" height="848"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="back.png"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acW-Pv-oZB">
+                                <rect key="frame" x="20" y="658" width="124" height="122"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="122" id="0bq-4Q-YOt"/>
+                                    <constraint firstAttribute="width" secondItem="acW-Pv-oZB" secondAttribute="height" multiplier="62:61" id="QCD-ed-Frl"/>
+                                    <constraint firstAttribute="width" constant="124" id="sz4-H3-Vf5"/>
+                                </constraints>
+                                <state key="normal" image="gimm310appBackIcon.png"/>
                                 <connections>
                                     <segue destination="Qox-ab-EES" kind="show" id="p16-aJ-qFk"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Flashcards" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZXr-FZ-4Rg">
-                                <rect key="frame" x="469" y="20" width="175" height="93"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E8u-z3-84k">
-                                <rect key="frame" x="352" y="182" width="409" height="360"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E8u-z3-84k">
+                                <rect key="frame" x="379" y="186" width="409" height="360"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="360" id="m1D-ON-MDV"/>
+                                    <constraint firstAttribute="width" constant="409" id="s7Y-Pt-szW"/>
+                                    <constraint firstAttribute="width" secondItem="E8u-z3-84k" secondAttribute="height" multiplier="409:360" id="yNV-rC-qQw"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ij0-CQ-UH1">
-                                <rect key="frame" x="532" y="740" width="49" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Submit"/>
-                                <connections>
-                                    <action selector="submitButton:" destination="0vS-In-cgf" eventType="touchUpInside" id="oAc-me-PhD"/>
-                                </connections>
-                            </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="Dah-U2-Qhd">
-                                <rect key="frame" x="210" y="641" width="692" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="Dah-U2-Qhd">
+                                <rect key="frame" x="268" y="645" width="631" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="1Sz-cW-XGy"/>
+                                    <constraint firstAttribute="width" constant="631" id="v2n-tf-yzg"/>
+                                    <constraint firstAttribute="width" secondItem="Dah-U2-Qhd" secondAttribute="height" multiplier="631:28" id="z5e-dT-9Qs"/>
+                                </constraints>
                                 <segments>
                                     <segment title="Anger"/>
                                     <segment title="Contempt"/>
@@ -150,14 +163,50 @@
                                     <segment title="Happiness"/>
                                     <segment title="Neutral"/>
                                     <segment title="Sadness"/>
-                                    <segment title="Suprise"/>
+                                    <segment title="Surprise"/>
                                 </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <action selector="indexChanged:" destination="0vS-In-cgf" eventType="valueChanged" id="E8W-7O-Djp"/>
                                 </connections>
                             </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ij0-CQ-UH1">
+                                <rect key="frame" x="510" y="714" width="147" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="92" id="0pL-u7-aac"/>
+                                    <constraint firstAttribute="width" secondItem="Ij0-CQ-UH1" secondAttribute="height" multiplier="23:12" id="2uq-RP-mBG"/>
+                                    <constraint firstAttribute="height" constant="48" id="hS1-iX-wNG"/>
+                                </constraints>
+                                <state key="normal" title="Submit" image="Submit.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitButton:" destination="0vS-In-cgf" eventType="touchUpInside" id="oAc-me-PhD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZbM-TV-NhD">
+                                <rect key="frame" x="359" y="46" width="448" height="101"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Flashcards.png"/>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Dah-U2-Qhd" firstAttribute="top" secondItem="E8u-z3-84k" secondAttribute="bottom" constant="99" id="6o8-NY-diD"/>
+                            <constraint firstItem="ctp-H1-Y9G" firstAttribute="trailing" secondItem="Ij0-CQ-UH1" secondAttribute="trailing" constant="508" id="7AJ-z4-QWz"/>
+                            <constraint firstItem="Dah-U2-Qhd" firstAttribute="top" secondItem="E8u-z3-84k" secondAttribute="bottom" constant="99" id="Cbk-59-o7b"/>
+                            <constraint firstItem="ctp-H1-Y9G" firstAttribute="bottom" secondItem="Ij0-CQ-UH1" secondAttribute="bottom" constant="53" id="LGR-Lr-5Sf"/>
+                            <constraint firstItem="Ij0-CQ-UH1" firstAttribute="top" secondItem="Dah-U2-Qhd" secondAttribute="bottom" constant="64" id="M88-hk-PlF"/>
+                            <constraint firstItem="Dah-U2-Qhd" firstAttribute="leading" secondItem="acW-Pv-oZB" secondAttribute="trailing" constant="66" id="Q5L-Zq-8eo"/>
+                            <constraint firstItem="ctp-H1-Y9G" firstAttribute="bottom" secondItem="acW-Pv-oZB" secondAttribute="bottom" constant="54" id="Sak-Zd-1Ni"/>
+                            <constraint firstItem="E8u-z3-84k" firstAttribute="leading" secondItem="ctp-H1-Y9G" secondAttribute="leading" constant="352" id="WIM-hS-vC2"/>
+                            <constraint firstItem="Ij0-CQ-UH1" firstAttribute="top" secondItem="Dah-U2-Qhd" secondAttribute="bottom" constant="64" id="bf1-gD-JDp"/>
+                            <constraint firstItem="acW-Pv-oZB" firstAttribute="top" secondItem="ctp-H1-Y9G" secondAttribute="top" constant="638" id="cfA-zC-xxM"/>
+                            <constraint firstItem="ctp-H1-Y9G" firstAttribute="trailing" secondItem="E8u-z3-84k" secondAttribute="trailing" constant="351" id="fh7-Gm-fBA"/>
+                            <constraint firstItem="Ij0-CQ-UH1" firstAttribute="leading" secondItem="acW-Pv-oZB" secondAttribute="trailing" constant="368" id="iVg-H5-YAC"/>
+                            <constraint firstItem="Dah-U2-Qhd" firstAttribute="leading" secondItem="acW-Pv-oZB" secondAttribute="trailing" constant="66" id="k0N-Au-rfU"/>
+                            <constraint firstItem="ctp-H1-Y9G" firstAttribute="trailing" secondItem="Dah-U2-Qhd" secondAttribute="trailing" constant="271" id="pGW-lG-f2H"/>
+                            <constraint firstItem="acW-Pv-oZB" firstAttribute="leading" secondItem="ctp-H1-Y9G" secondAttribute="leading" constant="20" id="tRU-8Z-ijP"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ctp-H1-Y9G"/>
                     </view>
                     <connections>
@@ -178,51 +227,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tWC-Ar-g1t">
-                                <rect key="frame" x="20" y="564" width="250" height="250"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gimm310appBackGround.png" translatesAutoresizingMaskIntoConstraints="NO" id="nwa-t2-xSJ">
+                                <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="back.png"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tWC-Ar-g1t">
+                                <rect key="frame" x="20" y="629" width="124" height="122"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="gimm310appBackIcon.png"/>
                                 <connections>
                                     <segue destination="Qox-ab-EES" kind="show" id="FtI-rW-9cV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RU6-j1-Gpz">
-                                <rect key="frame" x="534" y="263" width="88" height="65"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RU6-j1-Gpz">
+                                <rect key="frame" x="488" y="288" width="180" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <state key="normal" title="Emoji"/>
+                                <state key="normal" image="Emoji.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="easyButton:" destination="jGA-lz-JsK" eventType="touchUpInside" id="kVe-MR-Ql7"/>
                                     <segue destination="0vS-In-cgf" kind="show" id="2NM-Zg-q9e"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="35V-Ue-iRW">
-                                <rect key="frame" x="525" y="336" width="106" height="65"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="35V-Ue-iRW">
+                                <rect key="frame" x="468" y="392" width="220" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <state key="normal" title="Cartoon"/>
+                                <state key="normal" image="cartoon.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
-                                    <action selector="mediumButton:" destination="jGA-lz-JsK" eventType="touchUpInside" id="kOR-DM-SoI"/>
+                                    <action selector="mediumButton:" destination="jGA-lz-JsK" eventType="touchUpInside" id="ct2-CV-N2e"/>
                                     <segue destination="0vS-In-cgf" kind="show" id="0n8-Op-Bbh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L3Y-O5-s7H">
-                                <rect key="frame" x="524" y="409" width="108" height="65"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BGZ-pl-Oy0">
+                                <rect key="frame" x="252" y="130" width="609" height="137"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <state key="normal" title="Realistic"/>
+                                <state key="normal" image="ChooseDiff.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L3Y-O5-s7H">
+                                <rect key="frame" x="449" y="482" width="259" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="realistic.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="hardButton:" destination="jGA-lz-JsK" eventType="touchUpInside" id="KNo-pl-oRD"/>
-                                    <segue destination="0vS-In-cgf" kind="show" id="Iur-Nv-Dk2"/>
+                                    <segue destination="0vS-In-cgf" kind="show" id="V07-0V-IQJ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose Difficulty" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jAf-QR-sad">
-                                <rect key="frame" x="461" y="199" width="235" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="Bvu-gN-fmQ"/>
@@ -240,9 +294,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="gimm310appBackGround.png" translatesAutoresizingMaskIntoConstraints="NO" id="GbP-TX-juD">
+                                <rect key="frame" x="0.0" y="-4" width="1112" height="842"/>
+                            </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pJ9-uX-7G8">
-                                <rect key="frame" x="0.0" y="20" width="1112" height="814"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="20" y="-1" width="1072" height="842"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="842" id="8Bw-TD-VO2"/>
+                                    <constraint firstAttribute="width" secondItem="pJ9-uX-7G8" secondAttribute="height" multiplier="536:421" id="Mh0-bL-PoP"/>
+                                    <constraint firstAttribute="width" constant="1072" id="bh4-4K-yKy"/>
+                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hK9-a5-9Z9">
                                     <size key="itemSize" width="180" height="200"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -257,19 +319,27 @@
                                             <rect key="frame" x="0.0" y="0.0" width="180" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aI6-tj-tVn">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aI6-tj-tVn">
                                                     <rect key="frame" x="0.0" y="20" width="180" height="128"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mDR-K8-3Z8">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mDR-K8-3Z8">
                                                     <rect key="frame" x="0.0" y="159" width="180" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </view>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="aI6-tj-tVn" firstAttribute="top" secondItem="r0D-X5-I8a" secondAttribute="topMargin" id="6g8-qB-Fdx"/>
+                                            <constraint firstAttribute="trailing" secondItem="aI6-tj-tVn" secondAttribute="trailing" id="9Xf-qa-63X"/>
+                                            <constraint firstItem="mDR-K8-3Z8" firstAttribute="top" secondItem="aI6-tj-tVn" secondAttribute="bottom" constant="11" id="SmD-dt-248"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="mDR-K8-3Z8" secondAttribute="bottom" constant="20" id="hYY-KX-l37"/>
+                                            <constraint firstItem="aI6-tj-tVn" firstAttribute="trailing" secondItem="mDR-K8-3Z8" secondAttribute="trailing" id="hyY-G4-2jS"/>
+                                            <constraint firstItem="aI6-tj-tVn" firstAttribute="leading" secondItem="r0D-X5-I8a" secondAttribute="leading" id="kOR-Gq-Njj"/>
+                                            <constraint firstItem="aI6-tj-tVn" firstAttribute="leading" secondItem="mDR-K8-3Z8" secondAttribute="leading" id="pxJ-HL-eR6"/>
+                                        </constraints>
                                         <connections>
                                             <outlet property="cellImageView" destination="aI6-tj-tVn" id="8HE-jH-QKB"/>
                                             <outlet property="cellLabel" destination="mDR-K8-3Z8" id="tqT-sP-8zn"/>
@@ -277,10 +347,14 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugi-wS-1Qo">
-                                <rect key="frame" x="20" y="584" width="250" height="250"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="back.png"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugi-wS-1Qo">
+                                <rect key="frame" x="20" y="684" width="124" height="122"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="122" id="07s-ZB-qOp"/>
+                                    <constraint firstAttribute="width" secondItem="ugi-wS-1Qo" secondAttribute="height" multiplier="62:61" id="uMK-a0-fk9"/>
+                                    <constraint firstAttribute="width" constant="124" id="wNX-tW-Htu"/>
+                                </constraints>
+                                <state key="normal" image="gimm310appBackIcon.png"/>
                                 <connections>
                                     <segue destination="Qox-ab-EES" kind="show" id="NXt-oO-qjb"/>
                                 </connections>
@@ -288,10 +362,20 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="pJ9-uX-7G8" firstAttribute="trailing" secondItem="GQq-8O-4Sz" secondAttribute="trailing" id="3sw-uw-ndb"/>
-                            <constraint firstItem="pJ9-uX-7G8" firstAttribute="leading" secondItem="GQq-8O-4Sz" secondAttribute="leading" id="Nda-8G-EV4"/>
-                            <constraint firstItem="pJ9-uX-7G8" firstAttribute="bottom" secondItem="GQq-8O-4Sz" secondAttribute="bottom" id="T2G-Mx-D3I"/>
-                            <constraint firstItem="pJ9-uX-7G8" firstAttribute="top" secondItem="GQq-8O-4Sz" secondAttribute="top" id="waZ-iX-ukx"/>
+                            <constraint firstItem="ugi-wS-1Qo" firstAttribute="leading" secondItem="GQq-8O-4Sz" secondAttribute="leading" constant="20" id="0Uv-lS-Qc4"/>
+                            <constraint firstItem="pJ9-uX-7G8" firstAttribute="leading" secondItem="GQq-8O-4Sz" secondAttribute="leading" constant="20" id="Ge0-5w-qCj"/>
+                            <constraint firstItem="pJ9-uX-7G8" firstAttribute="trailing" secondItem="Oq2-BR-VCs" secondAttribute="trailingMargin" id="J9K-zu-oIR"/>
+                            <constraint firstItem="pJ9-uX-7G8" firstAttribute="leading" secondItem="ugi-wS-1Qo" secondAttribute="leading" id="J9e-bE-TWg"/>
+                            <constraint firstAttribute="bottom" secondItem="pJ9-uX-7G8" secondAttribute="bottom" constant="-7" id="MlG-sG-aAF"/>
+                            <constraint firstItem="GQq-8O-4Sz" firstAttribute="bottom" secondItem="ugi-wS-1Qo" secondAttribute="bottom" constant="28" id="P52-0o-rjx"/>
+                            <constraint firstItem="ugi-wS-1Qo" firstAttribute="top" secondItem="GQq-8O-4Sz" secondAttribute="top" constant="664" id="XOW-mT-Qem"/>
+                            <constraint firstItem="pJ9-uX-7G8" firstAttribute="centerX" secondItem="GbP-TX-juD" secondAttribute="centerX" id="Ya5-zY-hAV"/>
+                            <constraint firstItem="GQq-8O-4Sz" firstAttribute="trailing" secondItem="pJ9-uX-7G8" secondAttribute="trailing" constant="20" id="cFy-ca-oUc"/>
+                            <constraint firstItem="GQq-8O-4Sz" firstAttribute="trailing" secondItem="ugi-wS-1Qo" secondAttribute="trailing" constant="968" id="h5T-Aq-tIy"/>
+                            <constraint firstItem="pJ9-uX-7G8" firstAttribute="top" secondItem="Oq2-BR-VCs" secondAttribute="top" constant="-1" id="jeG-6X-Lhb"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="pJ9-uX-7G8" secondAttribute="bottom" constant="-7" id="pSd-9B-vGb"/>
+                            <constraint firstItem="pJ9-uX-7G8" firstAttribute="top" secondItem="Oq2-BR-VCs" secondAttribute="topMargin" constant="-21" id="qfy-21-Ved"/>
+                            <constraint firstItem="pJ9-uX-7G8" firstAttribute="leading" secondItem="Oq2-BR-VCs" secondAttribute="leadingMargin" id="yQK-B5-ojI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GQq-8O-4Sz"/>
                     </view>
@@ -302,16 +386,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mce-50-doe" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="837" y="-791"/>
+            <point key="canvasLocation" x="836.87050359712237" y="-791.36690647482021"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Symbol 275.png" width="69" height="69"/>
-        <image name="back.png" width="107" height="99"/>
-        <image name="folder.png" width="151.5" height="151.5"/>
+        <image name="ChooseDiff.png" width="932" height="165"/>
+        <image name="Emoji.png" width="356" height="157"/>
+        <image name="Flashcards.png" width="616" height="139"/>
+        <image name="Submit.png" width="500" height="144"/>
+        <image name="cartoon.png" width="399" height="92"/>
+        <image name="gimm310appBackGround.png" width="2048" height="1536"/>
+        <image name="gimm310appBackIcon.png" width="262" height="200"/>
+        <image name="gimm310appCameraIcon.png" width="278" height="229"/>
+        <image name="gimm310appFolderIcon.png" width="265" height="229"/>
+        <image name="gimm310appSettingsIcon.png" width="279" height="232"/>
+        <image name="realistic.png" width="529" height="145"/>
+        <image name="takePhoto.png" width="684" height="140"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2NM-Zg-q9e"/>
-        <segue reference="NXt-oO-qjb"/>
+        <segue reference="0n8-Op-Bbh"/>
+        <segue reference="p16-aJ-qFk"/>
     </inferredMetricsTieBreakers>
 </document>

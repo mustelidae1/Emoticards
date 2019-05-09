@@ -52,35 +52,44 @@ class PlaceFaceEmojis {
         
         sadnessPair = EmotionImagePair(emotion: "Sadness", url: Bundle.main.url(forResource: "sadness", withExtension: "png")!, path: Bundle.main.path(forResource: "sadness", ofType: "png")!)
         
-        surprisePair = EmotionImagePair(emotion: "Surprised", url: Bundle.main.url(forResource: "suprise", withExtension: "png")!, path: Bundle.main.path(forResource: "suprise", ofType: "png")!)
+        surprisePair = EmotionImagePair(emotion: "Surprise", url: Bundle.main.url(forResource: "surprise", withExtension: "png")!, path: Bundle.main.path(forResource: "surprise", ofType: "png")!)
     }
     func drawFaceRect(rects: [[String: Double]], emotionPair: [EmotionImagePair], view: UIImageView) -> EmotionImagePair {
-        //grab the width and height of the imageview
-        let width: CGFloat = view.frame.size.width
-        let height: CGFloat = view.frame.size.height
-        //Grab Image frame location in a rect
-        let pictureFrameLocation = CGRect(
-            origin: CGPoint(x: view.frame.origin.x, y: view.frame.origin.y),
-            size: CGSize(width: width, height: height))
-        
-        
-        
-        //get all the imageviews for each face
-        let images = FindImageRects(faceRects: rects, image: view, pictureFrame: pictureFrameLocation, emotionPairs: emotionPair)
-        
-        //For each view, add it as a subview
-        for views in images {
-            view.addSubview(views)
+        do{
+            //grab the width and height of the imageview
+            let width: CGFloat = view.frame.size.width
+            let height: CGFloat = view.frame.size.height
+            //Grab Image frame location in a rect
+            let pictureFrameLocation = CGRect(
+                origin: CGPoint(x: view.frame.origin.x, y: view.frame.origin.y),
+                size: CGSize(width: width, height: height))
+            
+            
+            
+            //get all the imageviews for each face
+            let images = FindImageRects(faceRects: rects, image: view, pictureFrame: pictureFrameLocation, emotionPairs: emotionPair)
+            
+            //For each view, add it as a subview
+            for views in images {
+                view.addSubview(views)
+            }
+            //Get a snapshot of the imageView and turn it into a UIImage
+            let imageWithEmojis = grabSnapshot(imageView: view)
+            view.subviews.forEach({$0.removeFromSuperview()})
+            if (emotionPair.count == 0){
+                var first = neutralPair
+                first?.image=imageWithEmojis
+                return first!
+            }
+            var first = try emotionPair[0]
+            first.image = imageWithEmojis
+            
+            //view.image = imageWithEmojis
+            return first
+        } catch{
+            return neutralPair
         }
-        //Get a snapshot of the imageView and turn it into a UIImage
-        let imageWithEmojis = grabSnapshot(imageView: view)
-        view.subviews.forEach({$0.removeFromSuperview()})
         
-        var first = emotionPair[0]
-        first.image = imageWithEmojis
-        
-        //view.image = imageWithEmojis
-        return first
     }
     
     func createView(rect: [String: Double], scaler: [String: CGFloat], pictureFrame: CGRect, EmotionPair: EmotionImagePair) -> UIImageView{

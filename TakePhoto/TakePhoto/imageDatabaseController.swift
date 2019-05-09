@@ -113,14 +113,6 @@ class imageDatabaseController{
     // The names here are the names of the image files in Assets.xcassets
     var collectionImages: [UIImage] = [
         UIImage(named: "image1")!,
-        /*UIImage(named: "image2")!,
-         UIImage(named: "image3")!,
-         UIImage(named: "image4")!,
-         UIImage(named: "image5")!,
-         UIImage(named: "image6")!,
-         UIImage(named: "image7")!,
-         UIImage(named: "image8")!,
-         UIImage(named: "image9")!,*/
     ]
     
     var collectionImagesEmojis: [UIImage] = [
@@ -177,8 +169,14 @@ class imageDatabaseController{
                 
                 let imageData = try Data(contentsOf: URL(fileURLWithPath: image[filePathHard]))
                 let canvasImage = UIImage(data: imageData)
+                let imageDataEmoji = try Data(contentsOf: URL(fileURLWithPath: image[filePathEasy]))
+                let canvasImageEmoji = UIImage(data: imageDataEmoji)
+                let imageDataShader = try Data(contentsOf: URL(fileURLWithPath: image[filePathMedium]))
+                let canvasImageShader = UIImage(data: imageDataShader)
                 collectionImages.append(canvasImage!)
                 imageLabels.append(image[date])
+                collectionImagesEmojis.append(canvasImageEmoji!)
+                collectionImagesShader.append(canvasImageShader!) 
             }
         } catch {
             print(error)
@@ -187,6 +185,7 @@ class imageDatabaseController{
     
     
     public func getRandomImage() -> ImageDetail {
+        print("Getting random image")
         let randomIndex = Int.random(in: 0 ..< collectionImages.count);
         var imageDetails = ImageDetail()
         
@@ -199,12 +198,15 @@ class imageDatabaseController{
             var canvasImage:UIImage = UIImage()
                 if (difficulty == "easy") {
                     //imageData = try Data(contentsOf: URL(fileURLWithPath: collectionImagesEmojis[randomIndex])
+                    print("Getting easy difficulty image")
                     canvasImage = collectionImagesEmojis[randomIndex]
                 } else if (difficulty == "medium") {
                     //imageData = try Data(contentsOf: URL(fileURLWithPath: collectionImagesShader[randomIndex]))
+                    print("Getting medium difficulty image")
                     canvasImage = collectionImagesShader[randomIndex]
                 } else if (difficulty == "hard") {
                     //imageData = try Data(contentsOf: URL(fileURLWithPath: image[filePathHard]))
+                    print("Getting hard difficulty image")
                     canvasImage = collectionImages[randomIndex]
                 }
                 
